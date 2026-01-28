@@ -33,6 +33,13 @@
 </head>
 <body>
     <div id="root"></div>
-    <script type="babel" data-type="module" src="index.tsx"></script>
+    <script type="text/babel" data-type="module">
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import App from './App';
+
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(<App />);
+</script>
 </body>
 </html>
