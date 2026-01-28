@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: './', // 이 부분이 추가되었습니다. 배포 시 경로 오류를 해결해줍니다.
+      base: './',
       server: {
         port: 3000,
         host: '0.0.0.0',
