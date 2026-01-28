@@ -29,10 +29,24 @@
 <body>
     <div id="root"></div>
     <script type="text/babel" data-type="module">
-        import React from 'react';
+        import React, { useState, useEffect, useRef } from 'react';
         import { createRoot } from 'react-dom/client';
-        import App from './App.tsx';
+        import { GoogleGenAI } from "@google/genai";
 
+        // 1. App 컴포넌트 내용을 여기에 직접 붙여넣습니다.
+        const App = () => {
+            return (
+                <div className="min-h-screen flex items-center justify-center bg-black text-green-500 font-mono">
+                    <div className="text-center">
+                        <h1 className="text-4xl mb-4 glitch-text">SYSTEM ONLINE</h1>
+                        <p>FORMAT AI 시스템에 접속되었습니다.</p>
+                        {/* 여기에 기존 App.tsx의 코드를 넣으시면 됩니다 */}
+                    </div>
+                </div>
+            );
+        };
+
+        // 2. 실행
         const container = document.getElementById('root');
         const root = createRoot(container);
         root.render(<App />);
